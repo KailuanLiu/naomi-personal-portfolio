@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import About from "@/components/About";
+import About from "@/components/About/About";
 import Experience from "@/components/Experience";
 import ProjectCard from "@/components/ProjectCard";
 import Contact from "@/components/Contact";
@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
 
       <div className="mx-auto max-w-7xl px-4 py-6">
-        <div className="relative h-64 rounded-3xl overflow-hidden">
+        <div className="relative h-64 rounded-3xl">
           <Image
             src="/ocean-banner.jpg"
             alt="ocean banner"
