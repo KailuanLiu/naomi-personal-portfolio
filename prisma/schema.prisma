@@ -8,13 +8,12 @@ datasource db {
 }
 
 generator Client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../src/generated/prisma"
 }
 
 model About {
   id Int @id @default(autoincrement())
   content String 
-  updatedAt DateTime @updatedAt
 } 
 

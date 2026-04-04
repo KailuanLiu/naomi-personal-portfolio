@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@base-ui/react": "^1.3.0",
     "@emailjs/browser": "^4.4.1",
     "@neondatabase/serverless": "^1.0.2",
     "@prisma/adapter-neon": "^7.6.0",
@@ -16,6 +17,7 @@
     "@prisma/client-runtime-utils": "^7.6.0",
     "@tailwindcss/postcss": "^4.2.2",
     "autoprefixer": "^10.4.20",
+    "iron-session": "^8.0.4",
     "mongoose": "^8.9.1",
     "next": "^15.5.14",
     "postcss": "^8.5.8",

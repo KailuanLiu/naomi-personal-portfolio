@@ -1,0 +1,56 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/styles/navbar.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.navbar_navbar__bhGmN {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #97bec3;
+  border-bottom: 1px solid #d0d0d0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar_left__k7xLi {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar_left__k7xLi a {
+  text-decoration: none;
+  background: #efc99b;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #555;
+  font-size: 14px;
+}
+
+.navbar_left__k7xLi a:hover {
+  background: #c7c7c7;
+}
+
+.navbar_right__VaL6f {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar_edit__JwV8B {
+  border: none;
+  background: #efc99b;
+  padding: 6px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.navbar_edit__JwV8B:hover {
+  background: #c7c7c7;
+}
+
+.navbar_navbar__bhGmN {
+  font-family: "Courier New", Courier, monospace;
+}
