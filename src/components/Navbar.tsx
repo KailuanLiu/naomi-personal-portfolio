@@ -7,6 +7,7 @@ export default function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
 
   const handleLogin = async () => {
@@ -16,12 +17,19 @@ export default function Navbar() {
       body: JSON.stringify({ password }),
     });
     if (res.ok) {
+      setIsLoggedIn(true);
       setShowLogin(false);
       setPassword('');
       setError('');
     } else {
       setError('Wrong password');
     }
+  };
+
+  const handleLogout = async () => {
+    const res = await fetch('/api/logout', {
+      method: 'POST'});
+      setIsLoggedIn(false);
   };
 
   return (
@@ -41,11 +49,16 @@ export default function Navbar() {
       </div>
 
       <div className={style.right}>
-        <button className={style.edit} onClick={() => setShowLogin(true)}>AUTH</button>
+          {isLoggedIn ? (
+            <button className = {style.edit} onClick = {handleLogout}> LOGOUT </button>
+          ) : (
+            <button className = {style.edit} onClick = {() => setShowLogin(true)}> AUTH </button>
+          )}
           {showLogin && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
               <div className="rounded-2xl bg-white p-8 shadow w-full max-w-sm space-y-4">
                 <h1 className="text-lg font-bold text-neutral-700">Admin Login</h1>
+
                 <input
                   type="password"
                   value={password}

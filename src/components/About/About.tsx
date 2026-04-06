@@ -25,16 +25,16 @@ export default function About() {
   }, []);
 
   const handleSave = async (newText: string): Promise<void> => {
-    const response = await fetch('/api/about', {
+    const res = await fetch('/api/about', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ about: newText }),
     });
 
-    const data = await response.json();
+    const data = await res.json();
     console.log('API response:', data);
 
-    if (!response.ok) {
+    if (!res.ok) {
       throw new Error('Failed to save about text');
     }
 
@@ -64,7 +64,7 @@ export default function About() {
         open={edit}
         onClose={() => setEdit(false)}
         onSave={handleSave}
-        title=":: Edit About Me"
+        title=":: edit about me"
         initialValue={aboutText}
       />
     </section>

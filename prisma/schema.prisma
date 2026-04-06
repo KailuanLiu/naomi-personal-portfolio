@@ -17,3 +17,13 @@ model About {
   content String 
 } 
 
+model Education {
+  id Int @id @default(autoincrement())
+  school String 
+  degree String
+  major String
+  concentration String 
+  startYear Int?
+  endYear Int?
+  description String 
+}
