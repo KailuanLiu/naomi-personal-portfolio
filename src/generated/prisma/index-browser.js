@@ -125,6 +125,19 @@ exports.Prisma.AboutScalarFieldEnum = {
   content: 'content'
 };
 
+exports.Prisma.EducationScalarFieldEnum = {
+  id: 'id',
+  school: 'school',
+  degree: 'degree',
+  major: 'major',
+  concentration: 'concentration',
+  startYear: 'startYear',
+  endYear: 'endYear',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -135,9 +148,15 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  About: 'About'
+  About: 'About',
+  Education: 'Education'
 };
 
 /**

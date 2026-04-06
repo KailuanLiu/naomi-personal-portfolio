@@ -7,7 +7,10 @@ import prisma from '@/lib/db';
 export async function GET() {
   try {
     const about = await prisma.about.findUnique({ where: { id: 1 } });
-    return NextResponse.json({ content: about?.content ?? '' });
+    return NextResponse.json(
+      { content: about?.content ?? '' },
+      { headers: { 'Cache-Control': 'no-store' } 
+    });
   } catch (error) {
     return NextResponse.json({ success: false, error: 'Failed to fetch' }, { status: 500 });
   }

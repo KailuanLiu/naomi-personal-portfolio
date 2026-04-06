@@ -5,16 +5,19 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About/About";
 import Experience from "@/components/Experience";
 import ProjectCard from "@/components/ProjectCard";
-import Contact from "@/components/Contact";
+import Education from "@/components/Education/Education";
+// import Contact from "@/components/Contact";
 import { useState } from "react";
 
 export default function Home() {
-  const tabs = ["about", "experience", "projects", "posts", "contact"];
+  // const tabs = ["about", "experience", "projects", "contact"];
+  const tabs = ["about", "experience", "projects"];
   const [active, setActive] = useState(tabs[0]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="min-h-screen bg-neutral-100 text-neutral-700">
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
       <div className="mx-auto max-w-7xl px-4 py-6">
         <div className="relative h-64 rounded-3xl">
@@ -74,34 +77,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white p-5 shadow">
-              <div className="mb-3 h-5 w-28 rounded bg-neutral-300" />
-              <div className="space-y-2">
-                <div className="h-3 rounded bg-neutral-200" />
-                <div className="h-3 rounded bg-neutral-200" />
-                <div className="h-3 w-5/6 rounded bg-neutral-200" />
-              </div>
-            </div>
-
-            {/* <div className="rounded-3xl bg-white p-5 shadow">
-              <div className="mb-4 h-5 w-24 rounded bg-neutral-300" />
-              <div className="space-y-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-lg bg-neutral-300" />
-                    <div className="flex-1 space-y-2">
-                      <div className="h-3 w-3/4 rounded bg-neutral-200" />
-                      <div className="h-3 w-1/2 rounded bg-neutral-200" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
           </aside>
 
           <main className="min-w-0 space-y-6">
+            
             <div id="about" className="scroll-mt-28">
-              <About />
+              <About isLoggedIn = {isLoggedIn} />
+            </div>
+
+            <div id = "education" className = "mt-scroll-28">
+                <Education isLoggedIn = {isLoggedIn} />
             </div>
 
             <div id = "projects" className = "scroll-mt-28">
@@ -165,28 +150,14 @@ export default function Home() {
                </div>
               </div>
           </div>
-            {/* <div id="posts" className="scroll-mt-28">
-              <div className="space-y-4 rounded-3xl bg-white p-6 shadow">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex gap-4">
-                    <div className="h-16 w-16 rounded-lg bg-neutral-300" />
-                    <div className="flex-1 space-y-2">
-                      <div className="h-3 w-1/3 rounded bg-neutral-300" />
-                      <div className="h-3 rounded bg-neutral-200" />
-                      <div className="h-3 w-2/3 rounded bg-neutral-200" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
 
             <div id="experience" className="scroll-mt-28">
               <Experience />
             </div>
 
-            <div id="contact" className="scroll-mt-28">
+            {/* <div id="contact" className="scroll-mt-28">
               <Contact />
-            </div>
+            </div> */}
           </main>
         </div>
       </div>
