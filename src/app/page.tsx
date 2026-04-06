@@ -77,6 +77,13 @@ export default function Home() {
               </div>
             </div>
 
+              <div className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 space-y-2 text-center text-sm text-neutral-600">
+                <p className="text-sm text-neutral-800">
+                    Contacts </p>
+                <p> kailuan1127@gmail.com </p>
+                <p> kliu97@calpoly.edu </p>
+                <p> 626-525-1021 </p>
+              </div>
           </aside>
 
           <main className="min-w-0 space-y-6">
