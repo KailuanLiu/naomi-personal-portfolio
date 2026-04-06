@@ -161,32 +161,7 @@ export default function Home() {
                         />
                       </a>
                     </div>
-
-                    <div className="w-[350px] flex-shrink-0 snap-start">
-                      <a href="https://github.com/keen-cp/assignment-5-2262-KailuanLiu" target="_blank" rel="noopener noreferrer">
-                        <ProjectCard
-                          title = "Programming Language Evaluator"
-                          organization = "CSC 430: Programming Languages"
-                          image = "/programming-languages.jpeg"
-                          technologies = {["SML", "nexus"]}
-                          date = "Feb. 2026 - Mar. 2026"
-                          description = "filler text"
-                        />
-                      </a>
-                    </div>
-
-                    <div className="w-[350px] flex-shrink-0 snap-start">
-                      <a href="https://github.com/keen-cp/assignment-5-2262-KailuanLiu" target="_blank" rel="noopener noreferrer">
-                        <ProjectCard
-                          title = "County Demographics Analysis Tool"
-                          organization = "CSC 357: Systems Programming"
-                          image = "/programming-languages.jpeg"
-                          technologies = {["C"]}
-                          date = "Oct. 2024 - Nov. 2024"
-                          description = "filler text"
-                        />
-                      </a>
-                    </div>
+                    
                </div>
               </div>
           </div>
