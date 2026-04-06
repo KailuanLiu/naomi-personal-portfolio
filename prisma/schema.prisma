@@ -19,11 +19,13 @@ model About {
 
 model Education {
   id Int @id @default(autoincrement())
-  school String 
+  school String
   degree String
   major String
-  concentration String 
-  startYear Int?
-  endYear Int?
-  description String 
+  concentration String?
+  startYear Int
+  endYear Int
+  description String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
