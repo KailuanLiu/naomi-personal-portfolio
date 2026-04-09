@@ -124,7 +124,7 @@ export default function Navbar({
           className="flex items-center gap-2 hover:opacity-70"
         >
           <Image
-            src="/linkedin.png"
+            src="/linkedIn.png"
             alt="LinkedIn"
             width={18}
             height={18}
